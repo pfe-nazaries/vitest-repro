@@ -5,9 +5,10 @@ import "../i18n.ts";
 // The warning is something that was always happening but not warned until now (the warning starts to be visible from vitest 2.1.5)
 // The Http backend fails during the test because there is no web server running
 // So the problem was real, but now visible.
-// Two approaches to solve this:
+// Two approaches for me to solve this:
 // 1) Leave the chained backend warning (HttpBackend will fail, then FsBackend will succeed) but reuse the main i18n config
 // 2) Initialize here i18n with the FsBackend only (duplicate i18n config)
+// About Vitest and maybe the happy-dom fetch change, this warning should be visible or not?
 
 // await i18n.use(Backend).init({
 //     backend: {
